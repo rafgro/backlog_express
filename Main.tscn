@@ -1,0 +1,954 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Main.cs" type="Script" id=1]
+[ext_resource path="res://compare_config_group.tres" type="ButtonGroup" id=2]
+
+[node name="Main" type="Control"]
+margin_right = 800.0
+margin_bottom = 700.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="P" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="M" type="MarginContainer" parent="P"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 20
+custom_constants/margin_top = 20
+custom_constants/margin_left = 20
+custom_constants/margin_bottom = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="R" type="VBoxContainer" parent="P/M"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 780.0
+margin_bottom = 680.0
+custom_constants/separation = 20
+
+[node name="Buttons" type="HBoxContainer" parent="P/M/R"]
+margin_right = 760.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="B1" type="Button" parent="P/M/R/Buttons"]
+margin_right = 123.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+text = "The List"
+
+[node name="B2" type="Button" parent="P/M/R/Buttons"]
+margin_left = 127.0
+margin_right = 250.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+text = "+ Add"
+
+[node name="B3" type="Button" parent="P/M/R/Buttons"]
+margin_left = 254.0
+margin_right = 378.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+text = "L-R Compare"
+
+[node name="B5" type="Button" parent="P/M/R/Buttons"]
+margin_left = 382.0
+margin_right = 505.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+text = "B/C Compare"
+
+[node name="B6" type="Button" parent="P/M/R/Buttons"]
+margin_left = 509.0
+margin_right = 632.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+text = "Module Sort"
+
+[node name="B4" type="Button" parent="P/M/R/Buttons"]
+margin_left = 636.0
+margin_right = 760.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 0, 30 )
+focus_mode = 0
+size_flags_horizontal = 3
+enabled_focus_mode = 0
+text = "Save"
+
+[node name="TheList" type="VBoxContainer" parent="P/M/R"]
+visible = false
+margin_top = 50.0
+margin_right = 760.0
+margin_bottom = 420.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+alignment = 1
+
+[node name="Description" type="Label" parent="P/M/R/TheList"]
+margin_right = 760.0
+margin_bottom = 14.0
+text = "Description"
+align = 1
+
+[node name="List" type="VBoxContainer" parent="P/M/R/TheList"]
+margin_left = 286.0
+margin_top = 34.0
+margin_right = 474.0
+margin_bottom = 370.0
+size_flags_horizontal = 4
+
+[node name="Item0" type="HBoxContainer" parent="P/M/R/TheList/List"]
+margin_right = 188.0
+margin_bottom = 30.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/TheList/List/Item0"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/TheList/List/Item0"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/TheList/List/Item0"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item1" type="HBoxContainer" parent="P/M/R/TheList/List"]
+margin_top = 34.0
+margin_right = 188.0
+margin_bottom = 64.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/TheList/List/Item1"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/TheList/List/Item1"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/TheList/List/Item1"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item2" type="HBoxContainer" parent="P/M/R/TheList/List"]
+margin_top = 68.0
+margin_right = 188.0
+margin_bottom = 98.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/TheList/List/Item2"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/TheList/List/Item2"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/TheList/List/Item2"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item3" type="HBoxContainer" parent="P/M/R/TheList/List"]
+margin_top = 102.0
+margin_right = 188.0
+margin_bottom = 132.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/TheList/List/Item3"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/TheList/List/Item3"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/TheList/List/Item3"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item4" type="HBoxContainer" parent="P/M/R/TheList/List"]
+margin_top = 136.0
+margin_right = 188.0
+margin_bottom = 166.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/TheList/List/Item4"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/TheList/List/Item4"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/TheList/List/Item4"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item5" type="HBoxContainer" parent="P/M/R/TheList/List"]
+margin_top = 170.0
+margin_right = 188.0
+margin_bottom = 200.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/TheList/List/Item5"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/TheList/List/Item5"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/TheList/List/Item5"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item6" type="HBoxContainer" parent="P/M/R/TheList/List"]
+margin_top = 204.0
+margin_right = 188.0
+margin_bottom = 234.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/TheList/List/Item6"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/TheList/List/Item6"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/TheList/List/Item6"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item7" type="HBoxContainer" parent="P/M/R/TheList/List"]
+margin_top = 238.0
+margin_right = 188.0
+margin_bottom = 268.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/TheList/List/Item7"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/TheList/List/Item7"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/TheList/List/Item7"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item8" type="HBoxContainer" parent="P/M/R/TheList/List"]
+margin_top = 272.0
+margin_right = 188.0
+margin_bottom = 302.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/TheList/List/Item8"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/TheList/List/Item8"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/TheList/List/Item8"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item9" type="HBoxContainer" parent="P/M/R/TheList/List"]
+margin_top = 306.0
+margin_right = 188.0
+margin_bottom = 336.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/TheList/List/Item9"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/TheList/List/Item9"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/TheList/List/Item9"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Add" type="VBoxContainer" parent="P/M/R"]
+visible = false
+margin_top = 50.0
+margin_right = 760.0
+margin_bottom = 660.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+alignment = 1
+
+[node name="Feature" type="LineEdit" parent="P/M/R/Add"]
+margin_left = 180.0
+margin_top = 194.0
+margin_right = 580.0
+margin_bottom = 218.0
+rect_min_size = Vector2( 400, 0 )
+size_flags_horizontal = 4
+text = "Feature"
+align = 1
+
+[node name="Module" type="LineEdit" parent="P/M/R/Add"]
+margin_left = 280.0
+margin_top = 238.0
+margin_right = 480.0
+margin_bottom = 262.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 4
+text = "Module"
+align = 1
+
+[node name="KnownModules" type="Label" parent="P/M/R/Add"]
+margin_top = 282.0
+margin_right = 760.0
+margin_bottom = 296.0
+text = "Known Modules:"
+align = 1
+autowrap = true
+
+[node name="InitialPos" type="HSlider" parent="P/M/R/Add"]
+margin_left = 255.0
+margin_top = 316.0
+margin_right = 505.0
+margin_bottom = 332.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 4
+max_value = 10.0
+value = 5.0
+tick_count = 11
+ticks_on_borders = true
+
+[node name="Confirm" type="Button" parent="P/M/R/Add"]
+margin_left = 305.0
+margin_top = 352.0
+margin_right = 455.0
+margin_bottom = 382.0
+rect_min_size = Vector2( 150, 30 )
+size_flags_horizontal = 4
+text = "Confirm"
+
+[node name="Message" type="Label" parent="P/M/R/Add"]
+margin_top = 402.0
+margin_right = 760.0
+margin_bottom = 416.0
+align = 1
+
+[node name="Compare" type="VBoxContainer" parent="P/M/R"]
+visible = false
+margin_top = 50.0
+margin_right = 760.0
+margin_bottom = 660.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+alignment = 1
+
+[node name="Descs" type="HBoxContainer" parent="P/M/R/Compare"]
+margin_top = 180.0
+margin_right = 760.0
+margin_bottom = 194.0
+size_flags_horizontal = 3
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Feature1" type="Label" parent="P/M/R/Compare/Descs"]
+margin_right = 355.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Feature 1"
+align = 2
+autowrap = true
+
+[node name="Feature2" type="Label" parent="P/M/R/Compare/Descs"]
+margin_left = 405.0
+margin_right = 760.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+text = "Feature 2"
+autowrap = true
+
+[node name="Benefit" type="VBoxContainer" parent="P/M/R/Compare"]
+visible = false
+margin_top = 175.0
+margin_right = 760.0
+margin_bottom = 317.0
+
+[node name="Label" type="Label" parent="P/M/R/Compare/Benefit"]
+margin_right = 760.0
+margin_bottom = 14.0
+text = "Benefit - which adds more value to player experience"
+align = 1
+
+[node name="BSlider" type="HSlider" parent="P/M/R/Compare/Benefit"]
+margin_left = 255.0
+margin_top = 18.0
+margin_right = 505.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 4
+min_value = 1.0
+value = 50.0
+
+[node name="Empty" type="Label" parent="P/M/R/Compare/Benefit"]
+margin_top = 38.0
+margin_right = 760.0
+margin_bottom = 52.0
+text = " "
+align = 1
+
+[node name="Label2" type="Label" parent="P/M/R/Compare/Benefit"]
+margin_top = 56.0
+margin_right = 760.0
+margin_bottom = 70.0
+text = "Cost - which takes more time and resources"
+align = 1
+
+[node name="CSlider" type="HSlider" parent="P/M/R/Compare/Benefit"]
+margin_left = 255.0
+margin_top = 74.0
+margin_right = 505.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 250, 0 )
+size_flags_horizontal = 4
+min_value = 1.0
+value = 50.0
+
+[node name="Empty2" type="Label" parent="P/M/R/Compare/Benefit"]
+margin_top = 94.0
+margin_right = 760.0
+margin_bottom = 108.0
+text = " "
+align = 1
+
+[node name="Confirm" type="Button" parent="P/M/R/Compare/Benefit"]
+margin_left = 305.0
+margin_top = 112.0
+margin_right = 455.0
+margin_bottom = 142.0
+rect_min_size = Vector2( 150, 30 )
+size_flags_horizontal = 4
+text = "Confirm"
+
+[node name="Choices" type="HBoxContainer" parent="P/M/R/Compare"]
+margin_top = 214.0
+margin_right = 760.0
+margin_bottom = 244.0
+custom_constants/separation = 50
+alignment = 1
+
+[node name="Feature1" type="Button" parent="P/M/R/Compare/Choices"]
+margin_left = 155.0
+margin_right = 355.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 200, 30 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "<- Left should be higher (Z)"
+
+[node name="Feature2" type="Button" parent="P/M/R/Compare/Choices"]
+margin_left = 405.0
+margin_right = 605.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 200, 30 )
+focus_mode = 0
+enabled_focus_mode = 0
+text = "(M) Right should be higher ->"
+
+[node name="Config" type="VBoxContainer" parent="P/M/R/Compare"]
+margin_top = 264.0
+margin_right = 760.0
+margin_bottom = 344.0
+
+[node name="Swap" type="CheckBox" parent="P/M/R/Compare/Config"]
+margin_left = 318.0
+margin_right = 441.0
+margin_bottom = 24.0
+size_flags_horizontal = 4
+pressed = true
+group = ExtResource( 2 )
+text = "Swap positions"
+
+[node name="Promote" type="CheckBox" parent="P/M/R/Compare/Config"]
+margin_left = 316.0
+margin_top = 28.0
+margin_right = 443.0
+margin_bottom = 52.0
+size_flags_horizontal = 4
+group = ExtResource( 2 )
+text = "Promote higher"
+
+[node name="Demote" type="CheckBox" parent="P/M/R/Compare/Config"]
+margin_left = 320.0
+margin_top = 56.0
+margin_right = 439.0
+margin_bottom = 80.0
+size_flags_horizontal = 4
+group = ExtResource( 2 )
+text = "Demote lower"
+
+[node name="Message" type="Label" parent="P/M/R/Compare"]
+margin_top = 364.0
+margin_right = 760.0
+margin_bottom = 395.0
+text = "
+"
+align = 1
+
+[node name="Goal" type="Label" parent="P/M/R/Compare"]
+margin_top = 415.0
+margin_right = 760.0
+margin_bottom = 429.0
+align = 2
+
+[node name="Module" type="VBoxContainer" parent="P/M/R"]
+visible = false
+margin_top = 50.0
+margin_right = 760.0
+margin_bottom = 660.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 20
+alignment = 1
+
+[node name="ModChoice" type="OptionButton" parent="P/M/R/Module"]
+margin_left = 280.0
+margin_top = 117.0
+margin_right = 480.0
+margin_bottom = 137.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 4
+
+[node name="List" type="VBoxContainer" parent="P/M/R/Module"]
+margin_left = 286.0
+margin_top = 157.0
+margin_right = 474.0
+margin_bottom = 493.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Item0" type="HBoxContainer" parent="P/M/R/Module/List"]
+margin_right = 188.0
+margin_bottom = 30.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/Module/List/Item0"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/Module/List/Item0"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/Module/List/Item0"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item1" type="HBoxContainer" parent="P/M/R/Module/List"]
+margin_top = 34.0
+margin_right = 188.0
+margin_bottom = 64.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/Module/List/Item1"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/Module/List/Item1"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/Module/List/Item1"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item2" type="HBoxContainer" parent="P/M/R/Module/List"]
+margin_top = 68.0
+margin_right = 188.0
+margin_bottom = 98.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/Module/List/Item2"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/Module/List/Item2"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/Module/List/Item2"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item3" type="HBoxContainer" parent="P/M/R/Module/List"]
+margin_top = 102.0
+margin_right = 188.0
+margin_bottom = 132.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/Module/List/Item3"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/Module/List/Item3"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/Module/List/Item3"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item4" type="HBoxContainer" parent="P/M/R/Module/List"]
+margin_top = 136.0
+margin_right = 188.0
+margin_bottom = 166.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/Module/List/Item4"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/Module/List/Item4"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/Module/List/Item4"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item5" type="HBoxContainer" parent="P/M/R/Module/List"]
+margin_top = 170.0
+margin_right = 188.0
+margin_bottom = 200.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/Module/List/Item5"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/Module/List/Item5"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/Module/List/Item5"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item6" type="HBoxContainer" parent="P/M/R/Module/List"]
+margin_top = 204.0
+margin_right = 188.0
+margin_bottom = 234.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/Module/List/Item6"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/Module/List/Item6"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/Module/List/Item6"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item7" type="HBoxContainer" parent="P/M/R/Module/List"]
+margin_top = 238.0
+margin_right = 188.0
+margin_bottom = 268.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/Module/List/Item7"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/Module/List/Item7"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/Module/List/Item7"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item8" type="HBoxContainer" parent="P/M/R/Module/List"]
+margin_top = 272.0
+margin_right = 188.0
+margin_bottom = 302.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/Module/List/Item8"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/Module/List/Item8"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/Module/List/Item8"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[node name="Item9" type="HBoxContainer" parent="P/M/R/Module/List"]
+margin_top = 306.0
+margin_right = 188.0
+margin_bottom = 336.0
+custom_constants/separation = 10
+
+[node name="Up" type="Button" parent="P/M/R/Module/List/Item9"]
+margin_right = 60.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Up"
+
+[node name="Down" type="Button" parent="P/M/R/Module/List/Item9"]
+margin_left = 70.0
+margin_right = 130.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 60, 30 )
+text = "Down"
+
+[node name="Label" type="Label" parent="P/M/R/Module/List/Item9"]
+margin_left = 140.0
+margin_top = 8.0
+margin_right = 188.0
+margin_bottom = 22.0
+text = "Feature"
+
+[connection signal="pressed" from="P/M/R/Buttons/B1" to="." method="DisplayDescription"]
+[connection signal="pressed" from="P/M/R/Buttons/B2" to="." method="DisplayAdd"]
+[connection signal="pressed" from="P/M/R/Buttons/B3" to="." method="DisplayCompare"]
+[connection signal="pressed" from="P/M/R/Buttons/B5" to="." method="DisplayBenefit"]
+[connection signal="pressed" from="P/M/R/Buttons/B6" to="." method="DisplayModule"]
+[connection signal="pressed" from="P/M/R/Buttons/B4" to="." method="Save"]
+[connection signal="pressed" from="P/M/R/TheList/List/Item0/Up" to="." method="TopListUp" binds= [ 0 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item0/Down" to="." method="TopListDown" binds= [ 0 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item1/Up" to="." method="TopListUp" binds= [ 1 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item1/Down" to="." method="TopListDown" binds= [ 1 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item2/Up" to="." method="TopListUp" binds= [ 2 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item2/Down" to="." method="TopListDown" binds= [ 2 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item3/Up" to="." method="TopListUp" binds= [ 3 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item3/Down" to="." method="TopListDown" binds= [ 3 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item4/Up" to="." method="TopListUp" binds= [ 4 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item4/Down" to="." method="TopListDown" binds= [ 4 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item5/Up" to="." method="TopListUp" binds= [ 5 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item5/Down" to="." method="TopListDown" binds= [ 5 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item6/Up" to="." method="TopListUp" binds= [ 6 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item6/Down" to="." method="TopListDown" binds= [ 6 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item7/Up" to="." method="TopListUp" binds= [ 7 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item7/Down" to="." method="TopListDown" binds= [ 7 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item8/Up" to="." method="TopListUp" binds= [ 8 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item8/Down" to="." method="TopListDown" binds= [ 8 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item9/Up" to="." method="TopListUp" binds= [ 9 ]]
+[connection signal="pressed" from="P/M/R/TheList/List/Item9/Down" to="." method="TopListDown" binds= [ 9 ]]
+[connection signal="pressed" from="P/M/R/Add/Confirm" to="." method="Add"]
+[connection signal="pressed" from="P/M/R/Compare/Benefit/Confirm" to="." method="FinishBenefit"]
+[connection signal="pressed" from="P/M/R/Compare/Choices/Feature1" to="." method="CompareDecided" binds= [ true ]]
+[connection signal="pressed" from="P/M/R/Compare/Choices/Feature2" to="." method="CompareDecided" binds= [ false ]]
+[connection signal="item_selected" from="P/M/R/Module/ModChoice" to="." method="_on_ModChoice_item_selected"]
+[connection signal="pressed" from="P/M/R/Module/List/Item0/Up" to="." method="ModListUp" binds= [ 0 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item0/Down" to="." method="ModListDown" binds= [ 0 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item1/Up" to="." method="ModListUp" binds= [ 1 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item1/Down" to="." method="ModListDown" binds= [ 1 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item2/Up" to="." method="ModListUp" binds= [ 2 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item2/Down" to="." method="ModListDown" binds= [ 2 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item3/Up" to="." method="ModListUp" binds= [ 3 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item3/Down" to="." method="ModListDown" binds= [ 3 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item4/Up" to="." method="ModListUp" binds= [ 4 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item4/Down" to="." method="ModListDown" binds= [ 4 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item5/Up" to="." method="ModListUp" binds= [ 5 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item5/Down" to="." method="ModListDown" binds= [ 5 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item6/Up" to="." method="ModListUp" binds= [ 6 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item6/Down" to="." method="ModListDown" binds= [ 6 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item7/Up" to="." method="ModListUp" binds= [ 7 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item7/Down" to="." method="ModListDown" binds= [ 7 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item8/Up" to="." method="ModListUp" binds= [ 8 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item8/Down" to="." method="ModListDown" binds= [ 8 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item9/Up" to="." method="ModListUp" binds= [ 9 ]]
+[connection signal="pressed" from="P/M/R/Module/List/Item9/Down" to="." method="ModListDown" binds= [ 9 ]]
